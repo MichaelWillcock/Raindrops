@@ -17,7 +17,14 @@ public static string RaindropsMethod(int number)
 Above is the initial method created. Here the input integer and output string can be seen in the method signiture. Following that is an example showing one of the if statements contained within the code that adds the correct statement to the output string based on the input integer.
 ```csharp
 if (number%3 == 0)
-            {
-                a += "Pling";
-            }
+    {
+        a += "Pling";
+    }
+```
+The method contains 3 other if statements, 2 containing similar contents to the above, except adding "Plang" for a multiple of 5 and "Plong" for a multiple of 7. The final if statement returns the digits of a non multiple integer and is shown below.
+```csharp
+if (number % 3 != 0 && number % 5 != 0 && number % 7 != 0)
+    {
+        a = $"{number}";
+    }
 ```
