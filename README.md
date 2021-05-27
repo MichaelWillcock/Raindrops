@@ -32,7 +32,7 @@ The next step was to create unit tests, to check the functionality of the method
 
 ![FunctionalityTests](https://user-images.githubusercontent.com/81698105/119901755-34399a80-bf3e-11eb-9c94-0f7b0ff5e570.png)
 
-The brief for the project contained examples and I thought it good practise to specifically test those examples just for the sake of propriaty. They are listed below.
+The brief for the project contained examples and I thought it good practise to specifically test those examples just for the sake of propriety. They are listed below.
 
 ![BriefTests](https://user-images.githubusercontent.com/81698105/119902373-0a34a800-bf3f-11eb-81d3-f9d1ce042b6f.png)
 
