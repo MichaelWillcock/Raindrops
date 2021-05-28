@@ -6,28 +6,32 @@ namespace Raindrops
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            //Manual Tests
+            Console.WriteLine(RaindropsMethod(3));
+            Console.WriteLine(RaindropsMethod(25));
+            Console.WriteLine(RaindropsMethod(28));
+            Console.WriteLine(RaindropsMethod(30));
+            Console.WriteLine(RaindropsMethod(70));
+            Console.WriteLine(RaindropsMethod(21));
+            Console.WriteLine(RaindropsMethod(210));
+            Console.WriteLine(RaindropsMethod(1));
         }
         public static string RaindropsMethod(int number)
         {
-            string a = "";
+            string result = null;
             if (number%3 == 0)
             {
-                a += "Pling";
+                result += "Pling";
             }
             if (number%5 == 0)
             {
-                a += "Plang";
+                result += "Plang";
             }
             if (number%7 == 0)
             {
-                a += "Plong";
+                result += "Plong";
             }
-            if (number % 3 != 0 && number % 5 != 0 && number % 7 != 0)
-            {
-                a = $"{number}";
-            }
-            return a.Trim();
+            return result == null ? number.ToString() : result.Trim();
         }
     }
 }
