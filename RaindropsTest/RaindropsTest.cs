@@ -41,15 +41,6 @@ namespace RaindropsTest
             Assert.That(expected, Is.EqualTo(actual));
         }
 
-        [TestCase(35, "PlangPlong")]
-        [TestCase(-35, "PlangPlong")]
-        [TestCase(70, "PlangPlong")]
-        public void PositiveandNegativeMultiplesOf5And7ReturnPlangPlong(int input, string expected)
-        {
-            var actual = Program.RaindropsMethod(input);
-            Assert.That(expected, Is.EqualTo(actual));
-        }
-
         [TestCase(21, "PlingPlong")]
         [TestCase(-21, "PlingPlong")]
         [TestCase(63, "PlingPlong")]
@@ -59,10 +50,28 @@ namespace RaindropsTest
             Assert.That(expected, Is.EqualTo(actual));
         }
 
+        [TestCase(35, "PlangPlong")]
+        [TestCase(-35, "PlangPlong")]
+        [TestCase(70, "PlangPlong")]
+        public void PositiveandNegativeMultiplesOf5And7ReturnPlangPlong(int input, string expected)
+        {
+            var actual = Program.RaindropsMethod(input);
+            Assert.That(expected, Is.EqualTo(actual));
+        }
+
         [TestCase(105, "PlingPlangPlong")]
         [TestCase(-105, "PlingPlangPlong")]
         [TestCase(210, "PlingPlangPlong")]
         public void PositiveandNegativeMultiplesOf3And5And7ReturnPlingPlangPlong(int input, string expected)
+        {
+            var actual = Program.RaindropsMethod(input);
+            Assert.That(expected, Is.EqualTo(actual));
+        }
+
+        [TestCase(1, "1")]
+        [TestCase(-1, "-1")]
+        [TestCase(4, "4")]
+        public void PositiveandNegativeIntegersWithNoMultiplesReturnStringsOfCorrespondingDigits(int input, string expected)
         {
             var actual = Program.RaindropsMethod(input);
             Assert.That(expected, Is.EqualTo(actual));

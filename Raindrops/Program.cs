@@ -31,7 +31,7 @@ namespace Raindrops
             {
                 result += "Plong";
             }
-            return result == null ? number.ToString() : result.Trim();
+            return result == null ? number.ToString().Trim() : result.Trim();
         }
     }
 }
