@@ -43,7 +43,10 @@ The final two tests are checking the edge cases of the maximum and minimum integ
 
 ![EdgeCaseTests](https://user-images.githubusercontent.com/81698105/119978515-a39ca200-bfb1-11eb-8a2c-a954fb423be5.png)
 
-The final screenshot shows that all the previously shown unit tests pass upon execution.
+The penultimate screenshot shows that all the previously shown unit tests pass upon execution.
 
 ![UnitTestResults](https://user-images.githubusercontent.com/81698105/119980039-a7c9bf00-bfb3-11eb-861b-82f622696689.png)
 
+The benefit of creating the program.cs file as a project and now a class library is that I could also manually test the method that I had created. The result of these manual tests can be seen in the final screenshot below.
+
+![ManualTests](https://user-images.githubusercontent.com/81698105/119980875-ce3c2a00-bfb4-11eb-82a7-066c860cf016.png)
