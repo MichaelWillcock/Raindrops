@@ -21,35 +21,29 @@ if (number%3 == 0)
         a += "Pling";
     }
 ```
-The method contains 3 other if statements, 2 containing similar contents to the above, except adding "Plang" for a multiple of 5 and "Plong" for a multiple of 7. The final if statement returns the digits of a non multiple integer and is shown below.
+The method contains 2 other if statements, both containing similar contents to the above, except adding "Plang" for a multiple of 5 and "Plong" for a multiple of 7. The methods return statement contains a more efficient ternary if statement, in order to return the digits of the input integer if it is not a multiple of 3, 5 or 7, and can be seen below. The .Trim() on the output string, should be irrelevant as there shouldn't be spaces at anypoint in the code, but are included anyway for good practice.
 ```csharp
-if (number % 3 != 0 && number % 5 != 0 && number % 7 != 0)
-    {
-        a = $"{number}";
-    }
+return result == null ? number.ToString().Trim() : result.Trim();
 ```
-The next step was to create unit tests, to check the functionality of the method. I started by creating testcases to check the basic functionality of the method ensuring the right strings were returned for the right input integer.
+The next step was to create unit tests, to check the functionality of the method, the total number of unique outputs of the method is 8. The majority of the tests contain 3 input variables, a positive integer that will return one of the unique outputs from the method, the negative version of the positive integer to ensure the method functions for numbers less than zero and an additional positive number to check that the method functions for larger multiples.
 
-![FunctionalityTests](https://user-images.githubusercontent.com/81698105/119901755-34399a80-bf3e-11eb-9c94-0f7b0ff5e570.png)
+The first 3 test methods check that positive and negative multiples of only 3, 5 and 7 return "Pling", "Plang" and "Plong" respectively.
 
-The brief for the project contained examples and I thought it good practise to specifically test those examples just for the sake of propriety. They are listed below.
+![IndividualResultTests](https://user-images.githubusercontent.com/81698105/119977120-ecebf200-bfaf-11eb-865d-952ab9de98cd.png)
 
-![BriefTests](https://user-images.githubusercontent.com/81698105/119902373-0a34a800-bf3f-11eb-81d3-f9d1ce042b6f.png)
+The next 3 methods test the dual combiantions of multiple values with 3&5, 3&7 and 5&7 returning "PlingPlang", "PlingPlong" and "PlangPlong" respectively
 
-The next set of tests all contain negative values of the Funtionality tests to ensure all the tests still pass for negative values.
+![DualResultTests](https://user-images.githubusercontent.com/81698105/119977608-8fa47080-bfb0-11eb-9e7d-c85b34e8466d.png)
 
-![NegativeTests](https://user-images.githubusercontent.com/81698105/119902464-29333a00-bf3f-11eb-910d-07ae7010f63a.png)
+The next 2 methods test the final official functionality of the original method, the first testing that multiples of 3, 5 and 7 return "PlingPlangPlong" and the second method checking that if the input integer is not a multiple of any of the numbers it returns a string of the input integer.
 
-The penultimate set of tests contain maximum and minimum integer values to ensure the edge cases are covered.
+![TrippleandNoResultTest](https://user-images.githubusercontent.com/81698105/119978186-3d178400-bfb1-11eb-9285-76cf63d54e01.png)
 
-![ExtremeTests](https://user-images.githubusercontent.com/81698105/119902623-6697c780-bf3f-11eb-98a8-c7e3711405ed.png)
+The final two tests are checking the edge cases of the maximum and minimum integer values and testing that zero gives the correct result which as zero is a universal multiple should return "PlingPlangPlong".
 
-The final test tests zero as an input integer, since zero divided by any number results in zero the way the method is written should result in "PlingPlangPlong" being output.
+![EdgeCaseTests](https://user-images.githubusercontent.com/81698105/119978515-a39ca200-bfb1-11eb-8a2c-a954fb423be5.png)
 
-![ZeroTestCase](https://user-images.githubusercontent.com/81698105/119902831-ae1e5380-bf3f-11eb-9ef4-e0ac6bb750f7.png)
+The final screenshot shows that all the previously shown unit tests pass upon execution.
 
-The final screenshot documents all of the unit tests shown above passing.
-
-![TestResults](https://user-images.githubusercontent.com/81698105/119903237-559b8600-bf40-11eb-81bf-8b0a1d5678fb.png)
-
+![UnitTestResults](https://user-images.githubusercontent.com/81698105/119980039-a7c9bf00-bfb3-11eb-861b-82f622696689.png)
 
